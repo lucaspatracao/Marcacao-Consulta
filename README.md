@@ -82,13 +82,13 @@ Atualmente, o agendamento é realizado de forma híbrida (presencial, telefone, 
 
 ## Tecnologias Utilizadas
 
-### Backend ( Rafael / Otávio )
+### Backend (Rafael / Otávio)
 - Java
 
-### Frontend ( Nykolas / Lucas )
+### Frontend (Nykolas / Lucas)
 - HTML, CSS, JavaScript
 
-### Banco de Dados ( Samuel )
+### Banco de Dados (Samuel)
 - MySQL 
 ---
 
@@ -96,7 +96,7 @@ Atualmente, o agendamento é realizado de forma híbrida (presencial, telefone, 
 
 ##  Fluxo do Sistema
 
-1. Paciente solicita agendamento (site, WhatsApp ou presencial)
+1. Paciente solicita agendamento 
 2. Sistema valida os dados automaticamente
 3. Exibe horários disponíveis
 4. Paciente seleciona a opção desejada
