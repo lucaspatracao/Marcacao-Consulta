@@ -70,7 +70,7 @@ Atualmente, o agendamento é realizado de forma híbrida (presencial, telefone, 
 
 ---
 
-### 🤖 Funcionalidades Inteligentes
+### Funcionalidades Inteligentes
 - Lembretes automáticos de consultas
 - Confirmação ativa de presença
 - Liberação automática de vagas não confirmadas
