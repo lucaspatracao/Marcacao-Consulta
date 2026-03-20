@@ -9,9 +9,12 @@ https://www.figma.com/design/nrJQBDVF8kQHMbw780XqR3/Projetos---Marca%C3%A7%C3%A3
 ## O quê fazer:
 
 ### Realizar os RF e RNF
+- Samuel || Otávio Pinheiro || Rafael Rubiá
 
 ### Realizar o Diagrama UML/Casos de Uso
+- Samuel || Otávio Pinheiro || Rafael Rubiá
 
 ### Implementar Design do Figma em Código
+- Nykolas Isler & Lucas Patracão
 
 ---
