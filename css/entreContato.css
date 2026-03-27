@@ -1,0 +1,116 @@
+/* Estilos específicos para a página de contato */
+.contact-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+}
+
+.contact-card {
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-card h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: var(--gray-900);
+}
+
+.contact-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--gray-600);
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(68, 154, 255, 0.2);
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input {
+    width: auto;
+    margin: 0;
+}
+
+.btn-enviar {
+    width: 100%;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background: #d41e42;
+}
+
+@media (max-width: 640px) {
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .radio-group {
+        gap: 1rem;
+    }
+}

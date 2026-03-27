@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem é Você | Funcionário ou Paciente?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VitaCare | Escolha seu perfil de acesso</title>
+    <!-- CSS Global do Projeto (mesmo da tela inicial) -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- CSS da Tela -->
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/login/escolhaLogin.css">
 </head>
+
 <body>
-    
+
+    <!-- CABEÇALHO (mesmo padrão da tela inicial) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-calendar-check" style="color: #EE2A4F;"></i>
+                <span>Vita<span style="color:#EE2A4F;">Agenda</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="/html/telaInicial.html">Início</a>
+                <a href="agendar.html">Agendar</a>
+                <a href="minhas-consultas.html">Minhas Consultas</a>
+                <a href="/html/login/escolhaLogin.html" class="active">Área do Admin</a>
+                <a href="/html/entreContato.html">Contato</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-choice">
+            <div class="container choice-container">
+                <div class="choice-title">
+                    <h1>Acesse sua conta <i class="fas fa-user-circle"></i></h1>
+                    <p>Escolha o perfil que melhor se adequa ao seu acesso</p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Card Paciente -->
+                    <div class="login-card" id="cardPaciente">
+                        <div class="card-icon patient">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h2>Paciente</h2>
+                        <p>Agende, consulte horários, receba lembretes e acompanhe seu histórico de consultas de forma
+                            simples e rápida.</p>
+                        <button class="btn-choice btn-patient" data-role="paciente">
+                            Acessar como Paciente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Card Administração -->
+                    <div class="login-card" id="cardAdmin">
+                        <div class="card-icon admin">
+                            <i class="fas fa-chalkboard-user"></i>
+                        </div>
+                        <h2>Administração</h2>
+                        <p>Gerencie agendas, visualize consultas, cadastre pacientes, acesse relatórios e controle todo
+                            o fluxo de atendimento.</p>
+                        <button class="btn-choice btn-admin" data-role="admin">
+                            Acessar como Admin <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-footer-choice">
+                    <p><i class="fas fa-shield-alt"></i> Ambiente seguro e acessível. <a href="#">Esqueceu suas
+                            credenciais?</a></p>
+                    <p style="margin-top: 0.5rem;">Voltar para a <a href="/html/telaInicial.html">página inicial</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ (mesmo da tela inicial) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>VitaCare</h4>
+                <p>Agendamento inteligente que reduz o tempo entre solicitação e confirmação, melhorando a experiência
+                    do paciente e a eficiência administrativa.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="/html/telaInicial.html">Início</a></li>
+                    <li><a href="#">Agendar Consulta</a></li>
+                    <li><a href="#">Minhas Consultas</a></li>
+                    <li><a href="/html/login/escolhaLogin.html">Área do Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> contato@vitacare.com</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 4002-8922</p>
+                <p><i class="fas fa-clock"></i> Atendimento: 24h (online)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Projeto</h4>
+                <p>Redução de absenteísmo com lembretes ativos.<br>Centralização de histórico e padronização de fluxo.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 VitaCare - Todos os direitos reservados. | Solução em agendamento de consultas</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

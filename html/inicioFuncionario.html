@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VitaAgenda | Painel do Funcionário</title>
+    <!-- CSS Global do Projeto -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS da Tela -->
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/inicioFuncionario.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho padrão -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-calendar-check" style="color: #EE2A4F;"></i>
+                <span>Vita<span style="color:#EE2A4F;">Care</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="/html/telaInicial.html">Início</a>
+                <a href="agendar.html">Agendar</a>
+                <a href="minhas-consultas.html">Minhas Consultas</a>
+                <a href="/html/login/escolhaLogin.html" class="active">Área do Admin</a>
+                <a href="/html/entreContato.html">Contato</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container dashboard-container">
+            <!-- Barra lateral (menu do funcionário) -->
+            <aside class="dashboard-sidebar">
+                <div class="user-welcome">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h2>Olá, Carlos Silva</h2>
+                    <p>Funcionário · Recepção</p>
+                </div>
+                <ul class="nav-menu">
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Adicionar</a></li>
+                    <li><a href="#"><i class="fas fa-user-circle"></i> Perfil</a></li>
+                </ul>
+                <div class="logout-btn">
+                    <a href="#" id="logoutButton"><i class="fas fa-sign-out-alt"></i> SAIR</a>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <div class="dashboard-content">
+                <!-- Cards de resumo -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Consultas Hoje</h3>
+                        <div class="stat-number">12</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pacientes Atendidos</h3>
+                        <div class="stat-number">86</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Consultas Pendentes</h3>
+                        <div class="stat-number">5</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Médicos Ativos</h3>
+                        <div class="stat-number">8</div>
+                    </div>
+                </div>
+
+                <!-- Lista de Pacientes -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-users"></i> Lista de Pacientes</h3>
+                        <button class="btn-outline" id="verPacientesBtn"><i class="fas fa-eye"></i> Ver todos</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Telefone</th>
+                                    <th>Última Consulta</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maria Souza</td>
+                                    <td>(11) 98765-4321</td>
+                                    <td>15/03/2025</td>
+                                    <td><button class="action-btn" title="Ver histórico"><i
+                                                class="fas fa-history"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>João Oliveira</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>10/03/2025</td>
+                                    <td><button class="action-btn"><i class="fas fa-history"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Ana Lima</td>
+                                    <td>(11) 99876-5432</td>
+                                    <td>05/03/2025</td>
+                                    <td><button class="action-btn"><i class="fas fa-history"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Calendário Geral / Horários Disponíveis -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-calendar-alt"></i> Calendário Geral (Horários Disponíveis)</h3>
+                        <button class="btn-outline" id="gerenciarHorariosBtn"><i class="fas fa-edit"></i>
+                            Gerenciar</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Médico</th>
+                                    <th>Horários</th>
+                                    <th>Vagas</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>27/03/2026</td>
+                                    <td>Dra. Ana Beatriz</td>
+                                    <td>08:00, 09:30, 11:00</td>
+                                    <td>3</td>
+                                    <td><button class="action-btn" title="Editar"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>28/03/2026</td>
+                                    <td>Dr. Carlos Mendes</td>
+                                    <td>14:00, 15:30</td>
+                                    <td>2</td>
+                                    <td><button class="action-btn"><i class="fas fa-edit"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>29/03/2026</td>
+                                    <td>Dra. Juliana Souza</td>
+                                    <td>09:00, 10:30, 14:00</td>
+                                    <td>3</td>
+                                    <td><button class="action-btn"><i class="fas fa-edit"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Validar Consultas (solicitações pendentes) -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-check-circle"></i> Validar Consultas</h3>
+                        <span class="badge badge-pending">5 pendentes</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Paciente</th>
+                                    <th>Data</th>
+                                    <th>Horário</th>
+                                    <th>Médico</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Carlos Alberto</td>
+                                    <td>27/03/2025</td>
+                                    <td>10:00</td>
+                                    <td>Dra. Ana Beatriz</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td class="action-buttons"><button class="action-btn validar-btn" data-id="1"
+                                            title="Validar"><i class="fas fa-check"
+                                                style="color: #10B981;"></i></button><button
+                                            class="action-btn cancelar-btn" title="Cancelar"><i class="fas fa-times"
+                                                style="color: #EF4444;"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernanda Lima</td>
+                                    <td>28/03/2025</td>
+                                    <td>15:30</td>
+                                    <td>Dr. Carlos Mendes</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td class="action-buttons"><button class="action-btn validar-btn"><i
+                                                class="fas fa-check"></i></button><button
+                                            class="action-btn cancelar-btn"><i class="fas fa-times"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Roberto Nunes</td>
+                                    <td>29/03/2025</td>
+                                    <td>09:00</td>
+                                    <td>Dra. Juliana Souza</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td class="action-buttons"><button class="action-btn validar-btn"><i
+                                                class="fas fa-check"></i></button><button
+                                            class="action-btn cancelar-btn"><i class="fas fa-times"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Lista de Médicos -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-stethoscope"></i> Lista de Médicos</h3>
+                        <button class="btn-outline" id="verMedicosBtn"><i class="fas fa-plus"></i> Adicionar</button>
+                    </div>
+                    <div class="medicos-grid">
+                        <div class="medico-card">
+                            <div class="medico-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="medico-info">
+                                <h4>Dra. Ana Beatriz</h4>
+                                <p>Cardiologia · CRM 12345</p>
+                            </div>
+                        </div>
+                        <div class="medico-card">
+                            <div class="medico-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="medico-info">
+                                <h4>Dr. Carlos Mendes</h4>
+                                <p>Ortopedia · CRM 67890</p>
+                            </div>
+                        </div>
+                        <div class="medico-card">
+                            <div class="medico-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="medico-info">
+                                <h4>Dra. Juliana Souza</h4>
+                                <p>Dermatologia · CRM 54321</p>
+                            </div>
+                        </div>
+                        <div class="medico-card">
+                            <div class="medico-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="medico-info">
+                                <h4>Dr. Roberto Alves</h4>
+                                <p>Clínico Geral · CRM 98765</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Postos de Saúde (Localização/Mapa) -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-map-marker-alt"></i> Postos de Saúde</h3>
+                        <button class="btn-outline" id="verPostosBtn"><i class="fas fa-map"></i> Ver Mapa</button>
+                    </div>
+                    <div class="postos-grid">
+                        <div class="posto-card">
+                            <div class="posto-icon"><i class="fas fa-hospital"></i></div>
+                            <div class="posto-info">
+                                <h4>UBS Central</h4>
+                                <p>Rua das Flores, 123 - Centro</p>
+                            </div>
+                        </div>
+                        <div class="posto-card">
+                            <div class="posto-icon"><i class="fas fa-clinic-medical"></i></div>
+                            <div class="posto-info">
+                                <h4>Posto de Saúde Norte</h4>
+                                <p>Av. Brasil, 456 - Zona Norte</p>
+                            </div>
+                        </div>
+                        <div class="posto-card">
+                            <div class="posto-icon"><i class="fas fa-ambulance"></i></div>
+                            <div class="posto-info">
+                                <h4>Pronto Atendimento Leste</h4>
+                                <p>Rua das Acácias, 789 - Leste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configurações (acesso rápido) -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-cog"></i> Configurações</h3>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+                        <div><a href="#" class="btn-outline">PACIENTES</a></div>
+                        <div><a href="#" class="btn-outline">MÉDICOS</a></div>
+                        <div><a href="#" class="btn-outline">POSTOS</a></div>
+                        <div><a href="#" class="btn-outline">VALIDAR</a></div>
+                        <div><a href="#" class="btn-outline">CONFIG.</a></div>
+                        <div><a href="#" class="btn-outline">PASTAS</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de confirmação (global, reutilizável) -->
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-container">
+            <h3><i class="fas fa-question-circle"></i> TEM CERTEZA?</h3>
+            <p id="confirmModalMessage">Deseja prosseguir?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">NÃO</button>
+                <button class="modal-btn modal-btn-confirm" id="confirmBtn">SIM</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>VitaAgenda</h4>
+                <p>Agendamento inteligente que reduz o tempo entre solicitação e confirmação.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="/html/telaInicial.html">Início</a></li>
+                    <li><a href="#">Agendar Consulta</a></li>
+                    <li><a href="#">Minhas Consultas</a></li>
+                    <li><a href="/html/login/escolhaLogin.html">Área do Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> contato@vitaagenda.com</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 4002-8922</p>
+                <p><i class="fas fa-clock"></i> Atendimento: 24h (online)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Projeto</h4>
+                <p>Redução de absenteísmo com lembretes ativos.<br>Centralização de histórico e padronização de fluxo.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 VitaCare - Todos os direitos reservados. | Solução em agendamento de consultas</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

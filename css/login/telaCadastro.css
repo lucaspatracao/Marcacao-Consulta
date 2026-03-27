@@ -1,0 +1,141 @@
+/* Estilos específicos para a página de cadastro */
+.cadastro-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+}
+
+.cadastro-card {
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 560px;
+    width: 100%;
+}
+
+.cadastro-card h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--gray-900);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(68, 154, 255, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 120px;
+}
+
+.phone-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.phone-group input:first-child {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin: 0;
+}
+
+.btn-cadastro {
+    width: 100%;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-cadastro:hover {
+    background: #d41e42;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px solid var(--gray-200);
+}
+
+@media (max-width: 640px) {
+    .cadastro-card {
+        padding: 1.5rem;
+    }
+
+    .cadastro-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

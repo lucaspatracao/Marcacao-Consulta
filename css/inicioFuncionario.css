@@ -1,0 +1,309 @@
+/* Estilos específicos para o dashboard do funcionário */
+.dashboard {
+    background: var(--gray-50);
+    min-height: calc(100vh - 140px);
+    padding: 2rem 0;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Menu lateral / perfil */
+.dashboard-sidebar {
+    flex: 0 0 280px;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.user-welcome {
+    text-align: center;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.user-welcome h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.user-welcome p {
+    color: var(--gray-600);
+    font-size: 0.85rem;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    color: var(--gray-700);
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.nav-menu a i {
+    width: 24px;
+    font-size: 1.1rem;
+}
+
+.nav-menu a:hover {
+    background: var(--gray-100);
+    color: var(--primary-red);
+}
+
+.nav-menu .active a {
+    background: var(--primary-red);
+    color: white;
+}
+
+.logout-btn {
+    margin-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 1.5rem;
+}
+
+.logout-btn a {
+    color: var(--primary-brown);
+}
+
+/* Conteúdo principal */
+.dashboard-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Cards de resumo */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+/* Seções de listas e funcionalidades */
+.section-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-header h3 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-danger-outline {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-danger-outline:hover {
+    background: var(--primary-red);
+    color: white;
+}
+
+/* Tabelas responsivas */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.data-table th {
+    font-weight: 600;
+    color: var(--gray-700);
+    background: var(--gray-50);
+}
+
+.data-table tr:hover {
+    background: var(--gray-50);
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-pending {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.badge-confirmed {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.25rem;
+    color: var(--gray-600);
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: var(--primary-blue);
+}
+
+/* Listas de médicos e postos */
+.medicos-grid,
+.postos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.medico-card,
+.posto-card {
+    background: var(--gray-50);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.medico-icon,
+.posto-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.medico-info h4,
+.posto-info h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.medico-info p,
+.posto-info p {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        flex: auto;
+        position: static;
+    }
+}

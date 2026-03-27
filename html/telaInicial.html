@@ -1,11 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Incial | Seja Bem-Vindo!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VitaCare | Agendamento de Consultas</title>
+    <!-- Font Awesome (ícones opcionais para melhor visual) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fonte moderna (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Global do Projeto -->
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
+
 <body>
-    
+    <!-- CABEÇALHO SEMÂNTICO -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-calendar-check" style="color: #EE2A4F;"></i>
+                <span>Vita<span style="color:#EE2A4F;">Care</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="/html/telaInicial.html" class="active">Início</a>
+                <a href="#">Agendar</a>
+                <a href="#">Minhas Consultas</a>
+                <a href="/html/login/escolhaLogin.html">Área do Admin</a>
+                <a href="/html/entreContato.html">Contato</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO (apresentação) -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Marque sua consulta <span class="highlight">em minutos</span></h1>
+                    <p>Agendamento rápido, lembretes automáticos e confirmação imediata. Cuide da sua saúde sem
+                        burocracia, com uma experiência pensada para você.</p>
+                    <div class="hero-stats">
+                        <div><i class="fas fa-clock"></i> <span>Confirmação <strong>automática</strong></span></div>
+                        <div><i class="fas fa-bell"></i> <span>Lembretes por <strong>WhatsApp/SMS</strong></span></div>
+                        <div><i class="fas fa-chart-line"></i> <span>Redução de <strong>45% no
+                                    absenteísmo</strong></span></div>
+                    </div>
+                    <a href="#agendamento" class="btn btn-primary btn-large">Agendar consulta <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x400/FF689E/FFFFFF?text=Cuide+da+Saúde"
+                        alt="Ilustração de agendamento médico"
+                        style="width:100%; border-radius: 32px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO AGENDAMENTO PRINCIPAL (com formulário e horários dinâmicos) -->
+        <section id="agendamento" class="schedule-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Agende sua consulta <i class="fas fa-heartbeat"></i></h2>
+                    <p>Escolha especialidade, profissional e visualize os horários disponíveis em tempo real</p>
+                </div>
+                <div class="schedule-wrapper">
+                    <!-- Coluna esquerda: filtros -->
+                    <div class="schedule-form">
+                        <div class="form-card">
+                            <h3><i class="fas fa-stethoscope"></i> Dados do agendamento</h3>
+                            <div class="form-group">
+                                <label for="especialidade">Especialidade</label>
+                                <select id="especialidade" class="form-control">
+                                    <option value="cardiologia">Cardiologia</option>
+                                    <option value="dermatologia">Dermatologia</option>
+                                    <option value="ortopedia">Ortopedia</option>
+                                    <option value="clinico">Clínico Geral</option>
+                                    <option value="pediatria">Pediatria</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="medico">Profissional (opcional)</label>
+                                <select id="medico" class="form-control">
+                                    <option value="">Qualquer profissional</option>
+                                    <option value="dr_ana">Dra. Ana Beatriz (Cardio)</option>
+                                    <option value="dr_carlos">Dr. Carlos Mendes (Ortopedia)</option>
+                                    <option value="dr_juliana">Dra. Juliana Souza (Dermato)</option>
+                                    <option value="dr_roberto">Dr. Roberto Alves (Clínico)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="data">Data desejada</label>
+                                <input type="date" id="data" class="form-control" value="2026-04-15">
+                            </div>
+                            <button id="btnBuscarHorarios" class="btn btn-secondary btn-block">Buscar horários
+                                disponíveis <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Coluna direita: horários dinâmicos -->
+                    <div class="schedule-slots">
+                        <div class="slots-card">
+                            <h3><i class="fas fa-calendar-alt"></i> Horários disponíveis</h3>
+                            <div id="horariosContainer" class="time-slots-grid">
+                                <!-- Os horários serão injetados via JavaScript dinamicamente -->
+                                <div class="loading-slots">Clique em "Buscar horários" para visualizar as vagas em tempo
+                                    real</div>
+                            </div>
+                            <p class="info-lembrete"><i class="fas fa-phone-alt"></i> Lembrete automático enviado 24h
+                                antes por WhatsApp ou SMS após confirmação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO BENEFÍCIOS (funcionalidades inteligentes) -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tecnologia que simplifica sua rotina</h2>
+                    <p>Funcionalidades inteligentes para reduzir filas e otimizar o atendimento</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: #FF689E20; color:#EE2A4F;"><i
+                                class="fas fa-bell"></i></div>
+                        <h3>Lembretes Automáticos</h3>
+                        <p>Notificações por WhatsApp e SMS reduzem faltas e mantêm você informado sobre seus
+                            compromissos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: #449AFF20; color:#449AFF;"><i
+                                class="fas fa-check-circle"></i></div>
+                        <h3>Confirmação Ativa</h3>
+                        <p>Confirmação de presença com um clique. Vagas não confirmadas são liberadas automaticamente.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: #5F92F420; color:#5F92F4;"><i
+                                class="fas fa-users"></i></div>
+                        <h3>Lista de Espera Inteligente</h3>
+                        <p>Cancelamentos acionam automaticamente os próximos pacientes da fila de espera, sem contato
+                            manual.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: #E45E4C20; color:#E45E4C;"><i
+                                class="fas fa-chart-simple"></i></div>
+                        <h3>Painel Administrativo</h3>
+                        <p>Gestão completa de agendas, histórico de pacientes e relatórios de produtividade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA (FLUXO DO SISTEMA) -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Como funciona o agendamento?</h2>
+                    <p>Simples, rápido e transparente</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Solicitação</h4>
+                        <p>Paciente informa especialidade, data e horário desejado.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Validação automática</h4>
+                        <p>Sistema verifica disponibilidade em tempo real e agenda disponível.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Confirmação imediata</h4>
+                        <p>Horário é reservado e paciente recebe comprovante digital.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Lembrete + Consulta</h4>
+                        <p>Notificação antes do atendimento e histórico centralizado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ SEMÂNTICO -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>VitaCare</h4>
+                <p>Agendamento inteligente que reduz o tempo entre solicitação e confirmação, melhorando a experiência
+                    do paciente e a eficiência administrativa.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Agendar Consulta</a></li>
+                    <li><a href="#">Minhas Consultas</a></li>
+                    <li><a href="#">Área do Admin</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> contato@vitacare.com</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 4002-8922</p>
+                <p><i class="fas fa-clock"></i> Atendimento: 24h (online)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Projeto</h4>
+                <p>Redução de absenteísmo com lembretes ativos.<br>Centralização de histórico e padronização de fluxo.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 VitaCare - Todos os direitos reservados. | Solução em agendamento de consultas</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-container">
+            <h3><i class="fas fa-question-circle"></i> TEM CERTEZA?</h3>
+            <p>Deseja confirmar o agendamento para o horário selecionado?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">NÃO</button>
+                <button class="modal-btn modal-btn-confirm" id="confirmBtn">SIM</button>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

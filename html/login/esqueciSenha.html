@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaAgenda | Recuperar Senha</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS da Tela -->
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/login/esqueciSenha.css">
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-calendar-check" style="color: #EE2A4F;"></i>
+                <span>Vita<span style="color:#EE2A4F;">Agenda</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="/html/telaInicial.html">Início</a>
+                <a href="agendar.html">Agendar</a>
+                <a href="minhas-consultas.html">Minhas Consultas</a>
+                <a href="/html/login/escolhaLogin.html">Área do Admin</a>
+                <a href="/html/entreContato.html">Contato</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="forgot-section">
+            <div class="forgot-card">
+                <i class="fas fa-key" style="font-size: 3rem; color: var(--primary-red); margin-bottom: 1rem;"></i>
+                <h1>Esqueci a senha</h1>
+                <p>Informe o e-mail cadastrado e enviaremos um link para redefinir sua senha.</p>
+                <form id="formEsqueciSenha">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    </div>
+                    <button type="submit" class="btn-recuperar">Enviar link de recuperação</button>
+                </form>
+                <div class="back-link">
+                    <a href="/html/login/loginPaciente.html">← Voltar para o login</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de confirmação (mesmo estilo global) -->
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-container">
+            <h3><i class="fas fa-envelope"></i> Solicitação enviada</h3>
+            <p id="modalMessage">Um link de recuperação foi enviado para o e-mail informado.</p>
+            <div class="modal-buttons" style="justify-content: center;">
+                <button class="modal-btn modal-btn-confirm" id="modalOkBtn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>VitaAgenda</h4>
+                <p>Agendamento inteligente que reduz o tempo entre solicitação e confirmação.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="/html/telaInicial.html">Início</a></li>
+                    <li><a href="#">Agendar Consulta</a></li>
+                    <li><a href="#">Minhas Consultas</a></li>
+                    <li><a href="/html/login/escolhaLogin.html">Área do Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> contato@vitaagenda.com</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 4002-8922</p>
+                <p><i class="fas fa-clock"></i> Atendimento: 24h (online)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Projeto</h4>
+                <p>Redução de absenteísmo com lembretes ativos.<br>Centralização de histórico e padronização de fluxo.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 VitaCare - Todos os direitos reservados. | Solução em agendamento de consultas</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

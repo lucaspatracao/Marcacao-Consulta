@@ -1,0 +1,148 @@
+/* Estilos específicos para a página de escolha de login */
+.login-choice {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+}
+
+.choice-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.choice-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.choice-title h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.choice-title p {
+    font-size: 1.2rem;
+    color: #4b5563;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.login-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.login-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+    border-color: #FF689E20;
+}
+
+.card-icon {
+    width: 90px;
+    height: 90px;
+    background: #FF689E20;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 3rem;
+}
+
+.card-icon.patient {
+    color: var(--primary-blue);
+    background: #449AFF20;
+}
+
+.card-icon.admin {
+    color: var(--primary-red);
+    background: #EE2A4F20;
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.login-card p {
+    color: #6b7280;
+    margin-bottom: 1.8rem;
+    line-height: 1.5;
+}
+
+.btn-choice {
+    background: transparent;
+    border: 2px solid currentColor;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-patient {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-patient:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-admin {
+    color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+
+.btn-admin:hover {
+    background: var(--primary-red);
+    color: white;
+}
+
+.info-footer-choice {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.info-footer-choice a {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .choice-title h1 {
+        font-size: 2rem;
+    }
+
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+}

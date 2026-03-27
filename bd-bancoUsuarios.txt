@@ -1,0 +1,14 @@
+Quatro (4) Tipo de Usuários:
+
+1. Admin
+- Função: Tudo que está abaixo + Ver Lista de Cadastrados e Mudar o Tipo de Usuário
+
+2. Funcionário/RH
+- Função: Validar Consultas dos Pacientes, Ver e Definir Calendário/Consultas do Médico, Perfil.
+- O Funcionário pode ser Recepcionista/RH ou Médico ->
+
+3. Médico 
+- Função: Ver e Definir Calendário/Consultas, Histórico de Consultas, Perfil.
+
+4. Paciente 
+- Função: Marcar Consultas, ver Histórico de Consultas, Perfil.

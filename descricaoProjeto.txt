@@ -1,0 +1,73 @@
+Estou desenvolvendo um Projeto HTML e CSS sobre Marcação de Consultas. Já fiz o Wireframe das telas, e quero que, de acordo com meu Protótipo do Figma, faça o HTML e CSS respectivo dessa página.
+
+Caso seja necessário, além disso, faça um css geral (estilo.css) que vai servir como o nosso Estilo Padrão do Projeto, ou seja, todas as páginas irão seguir esse Estilo.
+
+Segue abaixo, um pouco sobre o Projeto (Ainda sem Nome):
+
+1. Objetivos:
+
+- Reduzir o tempo entre solicitação e confirmação de consultas
+- Melhorar a experiência do paciente
+- Garantir acessibilidade para diferentes perfis de usuários
+- Diminuir o absenteísmo com lembretes automáticos
+- Centralizar informações e histórico dos pacientes
+- Padronizar o processo de agendamento
+- Reduzir a sobrecarga da equipe administrativa
+
+2. Funcionalidades
+
+2.1 Para Pacientes:
+
+- Agendamento de consultas online
+- Consulta de horários disponíveis em tempo real
+- Confirmação de agendamento
+- Recebimento de lembretes automáticos (WhatsApp/SMS)
+- Interface simples e acessível (foco em idosos e usuários com baixa familiaridade digital)
+
+2.2 Para Administração:
+
+- Painel de controle de agendamentos
+- Visualização de agendas médicas
+- Cadastro e gestão de pacientes
+- Acesso ao histórico de consultas
+- Edição e cancelamento de consultas
+- Padronização do fluxo de atendimento
+
+2.3 Funcionalidades Inteligentes:
+
+- Lembretes automáticos de consultas
+- Confirmação ativa de presença
+- Liberação automática de vagas não confirmadas
+- Lista de espera inteligente
+
+3. Fluxo do Sistema:
+
+- Paciente solicita agendamento
+- Sistema valida os dados automaticamente
+- Exibe horários disponíveis
+- Paciente seleciona a opção desejada
+- Confirmação automática da consulta
+- Envio de lembretes antes do atendimento
+
+4. Cores do Projeto (#HEX):
+
+- Vermelho: #EE2A4F
+- Rosa: #FF689E
+- Azul: #449AFF
+- Azul + Escuro: #5F92F4
+- Marrom: #E45E4C
+
+5. Tipos de Usuários:
+
+1. Admin
+- Função: Tudo que está abaixo + Ver Lista de Cadastrados e Mudar o Tipo de Usuário
+
+2. Funcionário/RH
+- Função: Validar Consultas dos Pacientes, Ver e Definir Calendário/Consultas do Médico, Perfil.
+- O Funcionário pode ser Recepcionista/RH ou Médico ->
+
+3. Médico 
+- Função: Ver e Definir Calendário/Consultas, Histórico de Consultas, Perfil.
+
+4. Paciente 
+- Função: Marcar Consultas, ver Histórico de Consultas, Perfil.
